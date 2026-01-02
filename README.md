@@ -1,9 +1,9 @@
-Solution Architecture case study for a greenfield manufacturing IT infrastructure (IT, OT, CCTV)
+
 # 🏭 Greenfield IT Infrastructure Architecture – Manufacturing Plant  
 **Portfolio | Solution Architecture Case Study**
 
 **Author:** Khalid Zamil  
-**Role:** Solution Architect *(End-to-End Ownership)*  
+**Role:** Project Coordinator + Solution Architect *(End-to-End Ownership)*  
 **Project Type:** Greenfield Manufacturing Infrastructure  
 **Confidentiality:** High-level design shared for portfolio purposes only
 
