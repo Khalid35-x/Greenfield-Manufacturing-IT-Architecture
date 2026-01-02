@@ -1,5 +1,4 @@
 Solution Architecture case study for a greenfield manufacturing IT infrastructure (IT, OT, CCTV)
-Initial architecture overview
 # 🏭 Greenfield IT Infrastructure Architecture – Manufacturing Plant  
 **Portfolio | Solution Architecture Case Study**
 
@@ -10,10 +9,10 @@ Initial architecture overview
 
 ---
 
-# 1. Business Context & Problem Statement
+## 1. Business Context & Problem Statement
 IDVB Recycling required a **secure, scalable, and audit-ready IT foundation** to enable go-live of a new manufacturing plant in Odisha.
 
-# Key Challenges
+### Key Challenges
 - Zero existing IT/OT/CCTV infrastructure (Greenfield environment)
 - Critical dependency on OT and CCTV for plant operations
 - Mandatory **segregation between IT, OT & CCTV networks**
@@ -89,18 +88,18 @@ Inter-network access permitted only through **firewall policy governance.**
 ---
 
 ## 6. IT Infrastructure Stack
-# Core & Perimeter
+### Core & Perimeter
 - 2× **ISPs (Redundant)**
 - 2× **Palo Alto Firewalls (HA)**
 - 2× **Core Switches**
 - Access switching + Wireless for ~400 users
 
-# Compute & Virtualization
+### Compute & Virtualization
 - 2× **HPE ProLiant DL380 Gen10**
 - **Hyper-V on Windows Server Datacenter**
 - 12 Virtual Machines (6 Infra + 6 Production)
 
-# Identity & Cybersecurity
+### Identity & Cybersecurity
 - On-Prem: **Active Directory, DNS**
 - Hybrid Identity via **IPSec VPN to Entra ID**
 - **RADIUS authentication** for network access
@@ -110,7 +109,7 @@ Inter-network access permitted only through **firewall policy governance.**
 
 ---
 
-# 7. Storage & Backup Design
+## 7. Storage & Backup Design
 - **HPE MSA 2060 iSCSI Storage** *(9 TB usable)*
 - Storage segmented into performance-aligned pools
 - **Commvault Backup Architecture**
@@ -122,39 +121,38 @@ Inter-network access permitted only through **firewall policy governance.**
 
 ---
 
-# 8. Recovery Objectives (Aligned to Business Tolerance)
-
-  Workload Tier                           RPO                    RTO 
-
-| Infrastructure (AD, DNS, Auth, Mgmt)   | ≤ 24 hrs            | ≤ 4 hrs |
-| Production IT Apps                     | ≤ 24 hrs            | ≤ 8 hrs |
-| Collaboration & Telephony              | ≤ 24 hrs            | ≤ 4 hrs |
-| OT Systems                             | Not backed up       | Site-level DR only |
-| CCTV                               | Recording continuity|   | Manual restore accepted |
+## 8. Recovery Objectives (Aligned to Business Tolerance)
+| Workload Tier | RPO | RTO |
+|---|---|---|
+| Infrastructure (AD, DNS, Auth, Mgmt) | ≤ 24 hrs | ≤ 4 hrs |
+| Production IT Apps | ≤ 24 hrs | ≤ 8 hrs |
+| Collaboration & Telephony | ≤ 24 hrs | ≤ 4 hrs |
+| OT Systems | Not backed up | Site-level DR only |
+| CCTV | Recording continuity | Manual restore accepted |
 
 *Balanced to meet resilience goals without over-engineering.*
 
 ---
 
-# 9. Risk Register & Mitigation
-| Risk                        | Impact            | Mitigation |
-
-| Hardware delivery delays    | Go-live risk      | Distributor switch & escalation |
-| Passive infra dependency    | Schedule risk     | Joint execution planning |
-| Vendor skill gaps           | Quality risk      | Internal SME governance |
-| Documentation gaps          | Audit exposure    | Architect-led HLD/LLD ownership |
-| Cyber threats               | Business outage   | MFA, MDR, immutable backups |
+## 9. Risk Register & Mitigation
+| Risk | Impact | Mitigation |
+|---|---|---|
+| Hardware delivery delays | Go-live risk | Distributor switch & escalation |
+| Passive infra dependency | Schedule risk | Joint execution planning |
+| Vendor skill gaps | Quality risk | Internal SME governance |
+| Documentation gaps | Audit exposure | Architect-led HLD/LLD ownership |
+| Cyber threats | Business outage | MFA, MDR, immutable backups |
 
 ---
 
-# 10. Financial Governance & Variance Control
+## 10. Financial Governance & Variance Control
 - **Approved Budget:** ~USD 3.94M  
 - **Final Spend:** ~USD 4.03M  
 - **Variance:** **2.3% (controlled & justified)**
 
 ---
 
-# 11. Business Outcomes Delivered
+## 11. Business Outcomes Delivered
 - On-time manufacturing IT go-live
 - Zero IT/OT/CCTV blast-radius risk
 - Audit-ready infrastructure from Day 1
@@ -164,21 +162,21 @@ Inter-network access permitted only through **firewall policy governance.**
 
 ---
 
-# 12. Future Improvements (If Constraints Changed)
-# If Budget Increased by 30%
+## 12. Future Improvements (If Constraints Changed)
+### If Budget Increased by 30%
 - Dedicated DR site
 - Additional Hyper-V node
 - Faster storage tiering
 - Advanced SIEM integration
 
-# If Budget Reduced by 30%
+### If Budget Reduced by 30%
 - Reduced backup retention
 - Phased VC rollout
 - Higher RTO acceptance
 
 ---
 
-# 🧠 Architect’s Summary
+## 🧠 Architect’s Summary
 This case study demonstrates **end-to-end solution architecture ownership** across:
 
 - Business risk alignment  
@@ -192,15 +190,16 @@ This case study demonstrates **end-to-end solution architecture ownership** acro
 
 ---
 
-# Scope Clarification
+## Scope Clarification
 - This is a **High-Level Design (HLD) view only**
 - **LLD configurations and credentials are excluded intentionally**
 - Vendor names are mentioned only where relevant to architectural decision traceability
 
 ---
 
-# Note
+## Author Note
 This portfolio reflects **real-world architectural decision-making and ownership**, intended to demonstrate **Solution Architecture capability**, not provide implementation-level guidance.
 
+---
 
-
+⭐ *If you found this useful, explore the full portfolio repository for additional case studies and architecture diagrams.*
