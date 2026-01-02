@@ -6,6 +6,8 @@
 **Role:** Project Coordinator + Solution Architect *(End-to-End Ownership)*  
 **Project Type:** Greenfield Manufacturing Infrastructure  
 **Confidentiality:** High-level design shared for portfolio purposes only
+  Architecture-Diagrams/README.md
+
 
 ---
 
