@@ -10,9 +10,24 @@
 
 ---
 
-## 🧭 Architecture Diagram Index  Solution-Architect-Portfolio/Media/
+## 🧭 Architecture Diagram Index 
 
----
+### Network Segmentation (IT)
+![IT Network Design](Architecture-Diagrams/it-network.png)
+
+### Network Segmentation (OT & CCTV)
+![OT & CCTV Network Segmentation](Architecture-Diagrams/ot-cctv-network-segmentation.png)
+
+### Server Virtualization
+![Server & Hyper-V Virtualization](Architecture-Diagrams/server-virtualization-architecture.png)
+
+### Storage Architecture (SAN)
+![HPE MSA 2060 iSCSI SAN Storage](Architecture-Diagrams/storage-architecture.png)
+
+### Backup & DR
+![Commvault Local + Immutable Cloud + Air-Gap](Architecture-Diagrams/backup-architecture.png)
+
+
 
 ## 1. Business Context & Problem Statement
 IDVB Recycling required a **secure, scalable, and audit-ready IT foundation** to enable go-live of a new manufacturing plant in Odisha.
